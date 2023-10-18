@@ -18,7 +18,13 @@ function App() {
     fetchInteractions();
   }, []);
 
-  console.log("interactions", interactions);
+  const output = {};
+  for (const { name } of interactions) {
+    output[name] ??= 0;
+    output[name] += 1;
+  }
+
+  console.log(output);
 
   return <h1>Hello World!</h1>;
 }
