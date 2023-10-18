@@ -41,9 +41,18 @@ function App() {
   }, [interactions]);
 
   return (
-    <div>
-      <DoughnutChart sectorNames={sectorNames} sectorCounts={sectorCounts} />
-    </div>
+    <>
+      <h1>Client Interactions</h1>
+
+      <div className="chart-container">
+        <div className="chart-item">
+          <DoughnutChart
+            sectorNames={sectorNames}
+            sectorCounts={sectorCounts}
+          />
+        </div>
+      </div>
+    </>
   );
 }
 
