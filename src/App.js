@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import DoughnutChart from "./components/DoughnutChart";
 
 function App() {
   const [interactions, setInteractions] = useState([]);
@@ -39,9 +40,11 @@ function App() {
     setSectorCounts(counts);
   }, [interactions]);
 
-  console.log(sectorCounts, sectorNames);
-
-  return <h1>Hello World!</h1>;
+  return (
+    <div>
+      <DoughnutChart sectorNames={sectorNames} sectorCounts={sectorCounts} />
+    </div>
+  );
 }
 
 export default App;
