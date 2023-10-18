@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  return <h1>Hello World!</h1>;
+  const [interactions, setInteractions] = useState([]);
 }
 
 export default App;
