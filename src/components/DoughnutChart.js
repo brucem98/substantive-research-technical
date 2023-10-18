@@ -2,6 +2,7 @@ import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { colorScheme } from "../resources/colorScheme";
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
@@ -11,12 +12,16 @@ function DoughnutChart({ sectorNames, sectorCounts }) {
     datasets: [
       {
         data: sectorCounts,
-        backgroundColor: "#800000",
+        backgroundColor: colorScheme,
+        borderColor: "#000000",
+        hoverBorderWidth: 3,
+        hoverOffset: 15,
       },
     ],
   };
 
   const options = {
+    devicePixelRatio: 4,
     plugins: {
       datalabels: {
         textAlign: "center",
@@ -37,10 +42,6 @@ function DoughnutChart({ sectorNames, sectorCounts }) {
         position: "right",
         onClick: null,
       },
-    },
-    legend: {
-      position: "right",
-      onClick: null,
     },
   };
 
