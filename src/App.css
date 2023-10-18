@@ -22,5 +22,14 @@
   padding: 1rem;
 }
 
+.title-section {
+  display: flex;
+  align-items: center;
+  height: 6rem;
+}
 
+.title-section img {
+  max-width: auto;
+  height: 75%;
+}
 

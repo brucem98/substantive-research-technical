@@ -22,6 +22,9 @@ function DoughnutChart({ sectorNames, sectorCounts }) {
 
   const options = {
     devicePixelRatio: 4,
+    layout: {
+      padding: 10,
+    },
     plugins: {
       datalabels: {
         textAlign: "center",

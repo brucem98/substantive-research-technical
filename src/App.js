@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import DoughnutChart from "./components/DoughnutChart";
+import personIcon from "./resources/person-icon.png";
 
 function App() {
   const [interactions, setInteractions] = useState([]);
@@ -42,9 +43,11 @@ function App() {
 
   return (
     <>
-      <h1>Client Interactions</h1>
-
       <div className="chart-container">
+        <div className="title-section">
+          <img src={personIcon} alt="person icon" />
+          <h1>Client Interactions</h1>
+        </div>
         <div className="chart-item">
           <DoughnutChart
             sectorNames={sectorNames}
